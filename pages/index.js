@@ -60,7 +60,7 @@ export default function Home() {
 <nav className="p-8 bg-white md:flex md:items-center md:justify-between sticky">
   
           <div className="flex justify-between items-center mx-auto">
-            <span className="text-2xl font-[Poppins] px-12 text-center">LOGO</span>
+            <span className="text-2xl px-12 font-bold text-center">LOGO</span>
           <div className="container">
             
 
@@ -140,20 +140,20 @@ export default function Home() {
         <div className={styles.header} alt="cover">
           <div className={styles.coverOverlay}>
           <div
-            className="container mx-auto py-52 px-10"
+            className="container mx-auto py-52"
             style={{ zIndex: "-1 !important" }}
           >
-            <div className="p-12">
+            <div className="p-8">
               <h1
                 className={`${styles.headText} my-6 text-2xl text-white font-light`}
               >
                 At our eye care clinic
               </h1>
-              <h1 className="text-4xl text-white font-black">
+              <h1 className="text-3xl text-white font-black">
                 We Offer Comprehensive Eye Exams
               </h1>
               <button className="bg-green-700 my-6 py-4 px-8 hover:bg-green-800 text-white font-medium py-2 px-4 rounded">
-                Explore Services
+                Book An Appointment
               </button>
             </div>
           </div>
