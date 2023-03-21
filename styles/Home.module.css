@@ -127,3 +127,15 @@
     filter: invert(1);
   }
 }
+
+
+/* Header */
+.header{
+  background-image: url(../public/cover.jpg);
+  background-size: cover;
+  
+}
+
+.headText{
+  color: white;
+}
