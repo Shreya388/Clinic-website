@@ -1,0 +1,10 @@
+.imgOverlay{
+    background-color: rgba(0, 0, 0, 0.552);
+    height: 30rem !important;
+}
+
+.doctorImg{
+    background-image: url(../public/doctor.jpg);
+    height: 30rem !important;
+    background-size: cover;
+}
