@@ -9,6 +9,8 @@ import Services from "../components/services";
 import About from "../components/aboutUs";
 import Footer from "../components/footer";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import Contact from "../components/contact";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -74,10 +76,12 @@ export default function Home() {
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
         ></script>
 
-        <nav className="p-2 bg-green-900 md:flex md:items-center md:justify-between sticky">
+        <nav className="p-3 bg-green-700 md:flex md:items-center md:justify-between sticky">
           <div className="container mx-auto">
-            <p className="text-gray-300 text-center text-sm">
+            <p className="text-white text-center">
               <i className="fa fa-phone text-sm"></i> +91-855-523-8149
+              <i className="fa fa-envelope text-sm pl-8"></i> meenaxjha@gmail.com
+              <i className="fa fa-location text-sm pl-8"></i> Buffalo County, Nebraska, United States
             </p>
           </div>
         </nav>
@@ -100,12 +104,20 @@ export default function Home() {
               }`}
             >
               <li className="mx-2 my-7  md:my-0">
-                <a
+                <Link
                   href="#"
                   className="text-white text-md hover:text-white duration-500 bg-green-600 rounded p-4"
                 >
                   HOME
-                </a>
+                </Link>
+              </li>
+              <li className="mx-2 my-7 md:my-0">
+                <Link
+                  href="/about"
+                  className="text-md text-md hover:bg-green-600 hover:text-white rounded p-4 duration-300"
+                >
+                  ABOUT
+                </Link>
               </li>
               <li className="mx-2 my-7 md:my-0">
                 <a
@@ -113,14 +125,6 @@ export default function Home() {
                   className="text-md text-md hover:bg-green-600 hover:text-white rounded p-4 duration-300"
                 >
                   SERVICES
-                </a>
-              </li>
-              <li className="mx-2 my-7 md:my-0">
-                <a
-                  href="#"
-                  className="text-md text-md hover:bg-green-600 hover:text-white rounded p-4 duration-300"
-                >
-                  ABOUT
                 </a>
               </li>
               <li className="mx-2 my-7 md:my-0">
@@ -152,19 +156,21 @@ export default function Home() {
         </nav>
 
         <div className={styles.header} alt="cover">
-          <div className={styles.coverOverlay}>
+          <div className={`${styles.coverOverlay} h-screen`}>
             <div
-              className="container mx-auto py-52"
-              style={{ zIndex: "-1 !important" }}
+              className="container py-52"
+              style={{ zIndex: "-1 !important", display: "flex" }}
             >
-              <div className="p-8">
+              <div className="p-8" style={{ margin: "auto" }}>
                 <h1
-                  className={`${styles.headText} my-6 text-2xl text-white font-light`}
+                  className={`${styles.headText} text-2xl text-white font-light`}
                 >
                   At our eye care clinic
                 </h1>
-                <h1 className="text-3xl text-white font-black">
-                  We Offer Comprehensive Eye Exams
+                <h1 className="text-5xl text-white font-black">
+                  We Offer<br />
+                  <h1 className="text-xl"> Comprehensive</h1>
+                  Eye Exams
                 </h1>
                 <button className="bg-green-700 my-6 py-4 px-4 hover:bg-green-800 text-white font-medium py-2 px-4 rounded">
                   Book An Appointment
@@ -175,6 +181,7 @@ export default function Home() {
         </div>
         <Services />
         <About />
+        <Contact />
         <Footer />
       </div>
     </>

@@ -2,12 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
-import cover from "../public/cover.jpg";
-import covertwo from "../public/covertwo.jpg";
-import { AiFillPhone } from "react-icons/ai";
-import Services from "../components/services";
 import About from "../components/aboutUs";
 import Footer from "../components/footer";
+import Link from "next/link";
+import aboutStyle from "../styles/About.module.css";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -84,11 +82,19 @@ export default function Home() {
               }`}
             >
               <li className="mx-2 my-7  md:my-0">
+                <Link
+                  href="/"
+                  className="text-md text-md hover:bg-green-600 hover:text-white rounded p-4 duration-300"
+                >
+                  HOME
+                </Link>
+              </li>
+              <li className="mx-2 my-7 md:my-0">
                 <a
                   href="#"
                   className="text-white text-md hover:text-white duration-500 bg-green-600 rounded p-4"
                 >
-                  HOME
+                  ABOUT
                 </a>
               </li>
               <li className="mx-2 my-7 md:my-0">
@@ -97,14 +103,6 @@ export default function Home() {
                   className="text-md text-md hover:bg-green-600 hover:text-white rounded p-4 duration-300"
                 >
                   SERVICES
-                </a>
-              </li>
-              <li className="mx-2 my-7 md:my-0">
-                <a
-                  href="#"
-                  className="text-md text-md hover:bg-green-600 hover:text-white rounded p-4 duration-300"
-                >
-                  ABOUT
                 </a>
               </li>
               <li className="mx-2 my-7 md:my-0">
@@ -134,8 +132,64 @@ export default function Home() {
             </ul>
           </div>
         </nav>
+        <div>
+        </div>
+
+        <div className={aboutStyle.aboutHead}>
+          <div className={aboutStyle.headOverlay}>
+              <div className="container mx-auto">
+                <h1 className="text-2xl text-center my-auto text-white">Home / About</h1>
+              </div>
+          </div>
+        </div>
 
         <About />
+
+        <div className="container mx-auto my-48 ">
+        <div className="flex flex-wrap -mx-4 mx-auto">
+        {/* Section 1 */}
+        <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+          <div className="bg-white rounded-lg shadow-lg p-20">
+            <h2 className="text-2xl font-bold mb-4">Section 1</h2>
+            <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit eros vel urna tincidunt fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam posuere libero sit amet risus facilisis dictum.</p>
+          </div>
+        </div>
+        <div className="w-full lg:w-1/3 px-4">
+          <div className="bg-white rounded-lg shadow-lg p-20">
+            <h2 className="text-2xl font-bold mb-4">Section 1</h2>
+            <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit eros vel urna tincidunt fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam posuere libero sit amet risus facilisis dictum.</p>
+          </div>
+        </div>
+
+        {/* Section 2 */}
+        <div className="w-full lg:w-1/2 px-4 py-12 mb-8 lg:mb-0">
+          <div className="bg-white rounded-lg shadow-lg p-20">
+            <h2 className="text-2xl font-bold mb-4">Section 2</h2>
+            <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit eros vel urna tincidunt fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam posuere libero sit amet risus facilisis dictum.</p>
+          </div>
+        </div>
+        <div className="w-full lg:w-1/3 px-4 py-12">
+          <div className="bg-white rounded-lg shadow-lg p-20">
+            <h2 className="text-2xl font-bold mb-4">Section 2</h2>
+            <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit eros vel urna tincidunt fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam posuere libero sit amet risus facilisis dictum.</p>
+          </div>
+        </div>
+
+        {/* Section 3 */}
+        <div className="w-full lg:w-1/2 px-4 py-12 mb-8 lg:mb-0">
+          <div className="bg-white rounded-lg shadow-lg p-20">
+            <h2 className="text-2xl font-bold mb-4">Section 2</h2>
+            <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit eros vel urna tincidunt fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam posuere libero sit amet risus facilisis dictum.</p>
+          </div>
+        </div>
+        <div className="w-full lg:w-1/3 px-4 py-12">
+          <div className="bg-white rounded-lg shadow-lg p-20">
+            <h2 className="text-2xl font-bold mb-4">Section 2</h2>
+            <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit eros vel urna tincidunt fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam posuere libero sit amet risus facilisis dictum.</p>
+          </div>
+        </div>
+        </div>
+</div>
         <Footer />
       </div>
     </>
