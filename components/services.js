@@ -82,8 +82,8 @@ const Services = () => {
 
       <div className="container mx-auto flex flex-wrap justify-center">
         {
-          serviceList.map((data) =>
-              <CardList title={data.title} description={data.description} />
+          serviceList.map((data, index) =>
+              <CardList key={index} title={data.title} description={data.description} />
           )
         }
       </div>

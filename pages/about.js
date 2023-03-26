@@ -6,6 +6,7 @@ import About from "../components/aboutUs";
 import Footer from "../components/footer";
 import Link from "next/link";
 import aboutStyle from "../styles/About.module.css";
+import Script from "next/script";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -46,17 +47,17 @@ export default function Home() {
           <title>Shreya Jha</title>
           <meta name="keywords" content="web development, programming" />
        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <Link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         </Head>
 
-        <script
+        <Script
           type="module"
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-        ></script>
-        <script
+        ></Script>
+        <Script
           nomodule
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-        ></script>
+        ></Script>
 
         <nav className="p-2 bg-green-900 md:flex md:items-center md:justify-between sticky">
           <div className="container mx-auto">
