@@ -5,7 +5,7 @@ import doctor from "../public/doctor.jpg";
 const About = () => {
   return (
     <>
-      <br />
+      
       <br />
       <br />
       <br />
