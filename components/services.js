@@ -18,7 +18,7 @@ const CardList = (props) => {
 
 const serviceList = [
   {
-    title: "Comprehensive Eye Exams",
+    title: "Comprehensive Eye Exam",
     description:
       "We take care of common vision problems such as nearsightedness, farsightedness, and astigmatism.",
   },
