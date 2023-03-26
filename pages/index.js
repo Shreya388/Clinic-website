@@ -11,6 +11,7 @@ import Footer from "../components/footer";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Contact from "../components/contact";
+import Script from 'next/script'
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -67,14 +68,14 @@ export default function Home() {
           />
         </Head>
 
-        <script
+        <Script
           type="module"
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-        ></script>
-        <script
+        ></Script>
+        <Script
           nomodule
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-        ></script>
+        ></Script>
 
         <nav className="p-3 bg-green-700 md:flex md:items-center md:justify-between sticky">
           <div className="container mx-auto">
@@ -169,7 +170,7 @@ export default function Home() {
                 </h1>
                 <h1 className="text-5xl text-white font-black">
                   We Offer<br />
-                  <h1 className="text-xl"> Comprehensive</h1>
+                  <p className="text-xl"> Comprehensive</p>
                   Eye Exams
                 </h1>
                 <button className="bg-green-700 my-6 py-4 px-4 hover:bg-green-800 text-white font-medium py-2 px-4 rounded">
